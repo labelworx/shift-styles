@@ -1,13 +1,31 @@
 {
-  "name": "labelworx/php-styles",
-  "description": "Label Worx shared PHP style rules for PHP-CS-Fixer",
+  "name": "labelworx/shift-styles",
+  "type": "library",
+  "description": "PHP code linter using Laravel Shift ruleset and PHP-CS-Fixer",
+  "keywords": ["laravel","linter","shift","php-cs-fixer"],
+  "homepage": "https://github.com/labelworx/shift-styles",
   "license": "MIT",
   "require": {
-    "friendsofphp/php-cs-fixer": "^2.0"
+    "friendsofphp/php-cs-fixer": "^2.0",
+    "symfony/console": "^5.0"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^3.0",
+    "phpunit/phpunit": "^8.0"
   },
   "autoload": {
+    "classmap": [
+      "src/"
+    ],
     "files": [
       "./src/helpers.php"
     ]
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Labelworx\\ShiftStyles\\ShiftServiceProvider"
+      ]
+    }
   }
 }
