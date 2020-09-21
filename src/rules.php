@@ -1,8 +1,9 @@
 <?php
 
-// last reviewed: v2.16.4
-
-$rules = [
+/**
+ * @see https://gist.github.com/laravel-shift/cab527923ed2a109dda047b97d53c200
+ */
+return [
     'array_syntax' => ['syntax' => 'short'],
     'binary_operator_spaces' => [
         'default' => 'single_space',
