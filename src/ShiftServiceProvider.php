@@ -3,16 +3,17 @@
 namespace Labelworx\ShiftStyles;
 
 use Illuminate\Support\ServiceProvider;
-use Labelworx\ShiftStyles\Console\ShiftCommand;
 use Labelworx\ShiftStyles\Console\SetupCommand;
+use Labelworx\ShiftStyles\Console\ShiftCommand;
 
 class ShiftServiceProvider extends ServiceProvider
 {
-    public function boot() {
+    public function boot()
+    {
         if ($this->app->runningInConsole()) {
             $this->commands([
                 SetupCommand::class,
-                ShiftCommand::class
+                ShiftCommand::class,
             ]);
         }
     }

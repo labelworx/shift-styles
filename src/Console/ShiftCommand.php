@@ -17,7 +17,7 @@ class ShiftCommand extends Command
     {
         $this->ensureDistFileExists();
 
-        $process = (new Process(array_merge($this->binary(), [ 'fix' ])))->setTimeout(null);
+        $process = (new Process(array_merge($this->binary(), ['fix'])))->setTimeout(null);
 
         try {
             return $process->run(function ($type, $line) {
@@ -44,7 +44,7 @@ class ShiftCommand extends Command
     protected function ensureDistFileExists()
     {
         if (! File::exists(base_path('/.php_cs.dist'))) {
-            File::copy(__DIR__ . '/../../stubs/.php_cs.stub', base_path('/.php_cs.dist'));
+            File::copy(__DIR__.'/../../stubs/.php_cs.stub', base_path('/.php_cs.dist'));
         }
     }
 }

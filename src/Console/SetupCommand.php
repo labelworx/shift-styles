@@ -13,7 +13,7 @@ class SetupCommand extends Command
 
     public function handle()
     {
-        File::copy(__DIR__ . '/../../stubs/.php_cs.stub', base_path('/.php_cs.dist'));
-        $this->info(".php_cs.dist created in project base directory");
+        File::copy(__DIR__.'/../../stubs/.php_cs.stub', base_path('/.php_cs.dist'));
+        $this->info('.php_cs.dist created in project base directory');
     }
 }
